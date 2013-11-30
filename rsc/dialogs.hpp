@@ -1,0 +1,1 @@
+#include "dlg\TRN_dlg_gearshop.hpp"

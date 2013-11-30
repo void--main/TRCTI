@@ -1,0 +1,478 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, TRN_client_player">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"StartFSM",0,250,-75.000000,-150.000000,25.000000,-100.000000,0.000000,"StartFSM"};
+item1[] = {"waitAlive",4,218,75.000000,-150.000000,175.000000,-100.000000,0.000000,"waitAlive"};
+item2[] = {"alive",2,250,225.000000,-150.000000,325.000000,-100.000000,0.000000,"alive"};
+item3[] = {"killed",4,218,1575.000000,-375.000000,1675.000000,-325.000000,3.000000,"killed"};
+item4[] = {"wounded",2,250,1725.000000,-375.000000,1825.000000,-325.000000,0.000000,"wounded"};
+item5[] = {"respawn",4,218,1725.000000,475.000000,1825.000000,525.000000,0.000000,"respawn"};
+item6[] = {"respawn",2,250,1575.000000,475.000000,1675.000000,525.000000,0.000000,"respawn"};
+item7[] = {"setAlive",4,218,225.000000,475.000000,325.000000,525.000000,0.000000,"setAlive"};
+item8[] = {"revive",4,218,1875.000000,-575.000000,1975.000000,-525.000000,0.000000,"revive"};
+item9[] = {"revive",2,250,1575.000000,-575.000000,1675.000000,-525.000000,0.000000,"revive"};
+item10[] = {"setAlive",4,218,225.000000,-575.000000,325.000000,-525.000000,0.000000,"setAlive"};
+item11[] = {"respawnTimer",4,218,1875.000000,-375.000000,1975.000000,-325.000000,0.000000,"respawnTimer"};
+item12[] = {"dead",2,250,1875.000000,475.000000,1975.000000,525.000000,0.000000,"dead"};
+item13[] = {"canRespawn",2,250,2025.000000,-375.000000,2125.000000,-325.000000,0.000000,"canRespawn"};
+item14[] = {"reviveTimer",4,218,2025.000000,475.000000,2125.000000,525.000000,0.000000,"reviveTimer"};
+item15[] = {"primary",4,218,875.000000,-300.000000,975.000000,-250.000000,1.000000,"primary"};
+item16[] = {"secondary",4,218,875.000000,-450.000000,975.000000,-400.000000,1.000000,"secondary"};
+item17[] = {"notinVehicle",4,218,500.000000,375.000000,600.000000,425.000000,0.000000,"notinVehicle"};
+item18[] = {"notInVehicle",2,250,1175.000000,375.000000,1275.000000,425.000000,0.000000,"notInVehicle"};
+item19[] = {"leaveVehicle",4,218,1175.000000,25.000000,1275.000000,75.000000,2.000000,"leaveVehicle"};
+item20[] = {"primary",2,250,1175.000000,-300.000000,1275.000000,-250.000000,0.000000,"primary"};
+item21[] = {"secondary",2,250,1175.000000,-450.000000,1275.000000,-400.000000,0.000000,"secondary"};
+item22[] = {"",7,210,1621.000000,396.000000,1629.000000,404.000000,0.000000,""};
+item23[] = {"",7,210,1371.000000,-429.000000,1379.000000,-421.000000,0.000000,""};
+item24[] = {"refresh",4,218,1275.000000,-525.000000,1375.000000,-475.000000,0.000000,"refresh"};
+item25[] = {"refresh",4,218,1275.000000,300.000000,1375.000000,350.000000,0.000000,"refresh"};
+item26[] = {"enterVehicle",4,218,700.000000,25.000000,800.000000,75.000000,1.000000,"enterVehicle"};
+item27[] = {"refresh",4,218,1075.000000,-225.000000,1175.000000,-175.000000,0.000000,"refresh"};
+item28[] = {"inVehicle",4,218,500.000000,-375.000000,600.000000,-325.000000,0.000000,"inVehicle"};
+item29[] = {"inVehicle",2,250,700.000000,-375.000000,800.000000,-325.000000,0.000000,"inVehicle"};
+item30[] = {"",7,210,1371.000000,45.999996,1379.000000,54.000004,0.000000,""};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,17};
+link3[] = {2,28};
+link4[] = {3,4};
+link5[] = {4,8};
+link6[] = {4,11};
+link7[] = {5,6};
+link8[] = {6,7};
+link9[] = {7,2};
+link10[] = {8,9};
+link11[] = {9,10};
+link12[] = {10,2};
+link13[] = {11,13};
+link14[] = {12,5};
+link15[] = {13,5};
+link16[] = {13,8};
+link17[] = {13,14};
+link18[] = {14,12};
+link19[] = {15,20};
+link20[] = {16,21};
+link21[] = {17,18};
+link22[] = {18,22};
+link23[] = {18,25};
+link24[] = {18,26};
+link25[] = {19,18};
+link26[] = {20,3};
+link27[] = {20,16};
+link28[] = {20,19};
+link29[] = {20,27};
+link30[] = {21,3};
+link31[] = {21,15};
+link32[] = {21,23};
+link33[] = {21,24};
+link34[] = {22,3};
+link35[] = {23,30};
+link36[] = {24,21};
+link37[] = {25,18};
+link38[] = {26,29};
+link39[] = {27,20};
+link40[] = {28,29};
+link41[] = {29,15};
+link42[] = {29,16};
+link43[] = {30,19};
+globals[] = {25.000000,1,0,0,0,640,480,1,174,6316128,1,-66.824463,2345.714600,829.496338,-839.547363,1895,1311,1};
+window[] = {2,-1,-1,-32000,-32000,1185,125,2045,125,3,1913};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "TRN_client_player";
+  class States
+  {
+    /*%FSM<STATE "StartFSM">*/
+    class StartFSM
+    {
+      name = "StartFSM";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "waitAlive">*/
+        class waitAlive
+        {
+          priority = 0.000000;
+          to="alive";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"alive player;"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "alive">*/
+    class alive
+    {
+      name = "alive";
+      init = /*%FSM<STATEINIT""">*/"_body = player;" \n
+       "" \n
+       "[_body, ""TRN_client_createPlayerMarker"", side player, false] call BIS_fnc_MP;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "inVehicle">*/
+        class inVehicle
+        {
+          priority = 0.000000;
+          to="inVehicle";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"vehicle player != player"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "notinVehicle">*/
+        class notinVehicle
+        {
+          priority = 0.000000;
+          to="notInVehicle";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"vehicle player == player"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[[_body, 0], ""TRN_client_updatePlayerMarker"", side player, false] call BIS_fnc_MP;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "wounded">*/
+    class wounded
+    {
+      name = "wounded";
+      init = /*%FSM<STATEINIT""">*/"_respawnTimer = time + TR_playerRespawnTime;" \n
+       "_reviveTimer = time + TR_playerReviveTime;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "respawnTimer">*/
+        class respawnTimer
+        {
+          priority = 0.000000;
+          to="canRespawn";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _respawnTimer"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "revive">*/
+        class revive
+        {
+          priority = 0.000000;
+          to="revive";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "respawn">*/
+    class respawn
+    {
+      name = "respawn";
+      init = /*%FSM<STATEINIT""">*/"[_body, ""TRN_client_deletePlayerMarker"", side player, false] call BIS_fnc_MP;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "setAlive">*/
+        class setAlive
+        {
+          priority = 0.000000;
+          to="alive";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "revive">*/
+    class revive
+    {
+      name = "revive";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "setAlive">*/
+        class setAlive
+        {
+          priority = 0.000000;
+          to="alive";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "dead">*/
+    class dead
+    {
+      name = "dead";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "respawn">*/
+        class respawn
+        {
+          priority = 0.000000;
+          to="respawn";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "canRespawn">*/
+    class canRespawn
+    {
+      name = "canRespawn";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "revive">*/
+        class revive
+        {
+          priority = 0.000000;
+          to="revive";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "reviveTimer">*/
+        class reviveTimer
+        {
+          priority = 0.000000;
+          to="dead";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time > _reviveTimer"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "respawn">*/
+        class respawn
+        {
+          priority = 0.000000;
+          to="respawn";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "notInVehicle">*/
+    class notInVehicle
+    {
+      name = "notInVehicle";
+      init = /*%FSM<STATEINIT""">*/"_vehicle = vehicle player;" \n
+       "_pos = getPos player;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "killed">*/
+        class killed
+        {
+          priority = 3.000000;
+          to="wounded";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(alive player)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[[_body, 3], ""TRN_client_updatePlayerMarker"", side player, false] call BIS_fnc_MP;" \n
+           "" \n
+           "[] spawn TRN_client_playerKilled;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "enterVehicle">*/
+        class enterVehicle
+        {
+          priority = 1.000000;
+          to="inVehicle";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"vehicle player != player"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "refresh">*/
+        class refresh
+        {
+          priority = 0.000000;
+          to="notInVehicle";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_pos distance player) > TR_playerMarkerUpdateDistance"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[_body, ""TRN_client_updatePlayerMarkerPos"", side player, false] call BIS_fnc_MP;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "primary">*/
+    class primary
+    {
+      name = "primary";
+      init = /*%FSM<STATEINIT""">*/"_pos = getPos player;" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "killed">*/
+        class killed
+        {
+          priority = 3.000000;
+          to="wounded";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(alive player)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[[_body, 3], ""TRN_client_updatePlayerMarker"", side player, false] call BIS_fnc_MP;" \n
+           "" \n
+           "[] spawn TRN_client_playerKilled;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "leaveVehicle">*/
+        class leaveVehicle
+        {
+          priority = 2.000000;
+          to="notInVehicle";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"vehicle player == player"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[[_body, 0], ""TRN_client_updatePlayerMarker"", side player, false] call BIS_fnc_MP;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "secondary">*/
+        class secondary
+        {
+          priority = 1.000000;
+          to="secondary";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((player != assignedDriver _vehicle) && (count (crew _vehicle) > 1)) &&" \n
+           "((player != assignedGunner _vehicle) || (isPlayer (assignedDriver _vehicle)))  &&" \n
+           "((player == assignedCommander _vehicle) || (!(isPlayer (assignedDriver _vehicle)) || !(isPlayer (assignedGunner _vehicle))))" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[[_body, 2], ""TRN_client_updatePlayerMarker"", side player, false] call BIS_fnc_MP;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "refresh">*/
+        class refresh
+        {
+          priority = 0.000000;
+          to="primary";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_pos distance player) > TR_playerMarkerUpdateDistance"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[_body, ""TRN_client_updatePlayerMarkerPos"", side player, false] call BIS_fnc_MP;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "secondary">*/
+    class secondary
+    {
+      name = "secondary";
+      init = /*%FSM<STATEINIT""">*/"_pos = getPos player;" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "killed">*/
+        class killed
+        {
+          priority = 3.000000;
+          to="wounded";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(alive player)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[[_body, 3], ""TRN_client_updatePlayerMarker"", side player, false] call BIS_fnc_MP;" \n
+           "" \n
+           "[] spawn TRN_client_playerKilled;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "leaveVehicle">*/
+        class leaveVehicle
+        {
+          priority = 2.000000;
+          to="notInVehicle";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"vehicle player == player"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[[_body, 0], ""TRN_client_updatePlayerMarker"", side player, false] call BIS_fnc_MP;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "primary">*/
+        class primary
+        {
+          priority = 1.000000;
+          to="primary";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((player == assignedDriver _vehicle) || (count (crew _vehicle) == 1)) ||" \n
+           "((player == assignedGunner _vehicle) && (!(isPlayer (assignedDriver _vehicle)))) || " \n
+           "((player == assignedCommander _vehicle) && (!(isPlayer (assignedDriver _vehicle)) && !(isPlayer (assignedGunner _vehicle))))"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[[_body, 1], ""TRN_client_updatePlayerMarker"", side player, false] call BIS_fnc_MP;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "refresh">*/
+        class refresh
+        {
+          priority = 0.000000;
+          to="secondary";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_pos distance player) > TR_playerMarkerUpdateDistance"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[_body, ""TRN_client_updatePlayerMarkerPos"", side player, false] call BIS_fnc_MP;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "inVehicle">*/
+    class inVehicle
+    {
+      name = "inVehicle";
+      init = /*%FSM<STATEINIT""">*/"_vehicle = vehicle player;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "secondary">*/
+        class secondary
+        {
+          priority = 1.000000;
+          to="secondary";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((player != assignedDriver _vehicle) && (count (crew _vehicle) > 1)) &&" \n
+           "((player != assignedGunner _vehicle) || (isPlayer (assignedDriver _vehicle)))  &&" \n
+           "((player == assignedCommander _vehicle) || (!(isPlayer (assignedDriver _vehicle)) || !(isPlayer (assignedGunner _vehicle))))" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[[_body, 2], ""TRN_client_updatePlayerMarker"", side player, false] call BIS_fnc_MP;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "primary">*/
+        class primary
+        {
+          priority = 1.000000;
+          to="primary";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((player == assignedDriver _vehicle) || (count (crew _vehicle) == 1)) ||" \n
+           "((player == assignedGunner _vehicle) && (!(isPlayer (assignedDriver _vehicle)))) || " \n
+           "((player == assignedCommander _vehicle) && (!(isPlayer (assignedDriver _vehicle)) && !(isPlayer (assignedGunner _vehicle))))"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"[[_body, 1], ""TRN_client_updatePlayerMarker"", side player, false] call BIS_fnc_MP;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="StartFSM";
+  finalStates[] =
+  {
+  };
+};
+/*%FSM</COMPILE>*/

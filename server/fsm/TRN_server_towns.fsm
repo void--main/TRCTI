@@ -1,0 +1,556 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, TRN_server_towns.fsm">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"StartFSM",0,250,-100.000000,-125.000000,0.000000,-75.000000,0.000000,"StartFSM"};
+item1[] = {"startWest",4,218,75.000000,-650.000000,175.000000,-600.000000,0.000000,"startWest"};
+item2[] = {"startResist",4,218,75.000000,-125.000000,175.000000,-75.000000,0.000000,"startResist"};
+item3[] = {"startEast",4,218,75.000000,400.000000,175.000000,450.000000,0.000000,"startEast"};
+item4[] = {"holdWest",2,250,225.000000,-650.000000,325.000000,-600.000000,0.000000,"holdWest"};
+item5[] = {"holdResist",2,250,225.000000,-125.000000,325.000000,-75.000000,0.000000,"holdResist"};
+item6[] = {"holdEast",2,250,225.000000,400.000000,325.000000,450.000000,0.000000,"holdEast"};
+item7[] = {"captureEast",4,218,475.000000,-575.000000,575.000000,-525.000000,0.000000,"captureEast"};
+item8[] = {"captureHoldWest",2,250,825.000000,-650.000000,925.000000,-600.000000,0.000000,"captureHoldWest"};
+item9[] = {"capturedWest",4,218,475.000000,-725.000000,575.000000,-675.000000,2.000000,"capturedWest"};
+item10[] = {"capturedEast",4,218,475.000000,475.000000,575.000000,525.000000,2.000000,"capturedEast"};
+item11[] = {"captureLoop",8,218,925.000000,-600.000000,1025.000000,-550.000000,0.000000,"captureLoop"};
+item12[] = {"captureSleep",2,250,1025.000000,-650.000000,1125.000000,-600.000000,0.000000,"captureSleep"};
+item13[] = {"captureSleep",4,218,925.000000,-700.000000,1025.000000,-650.000000,0.000000,"captureSleep"};
+item14[] = {"discoveredWest",4,218,225.000000,300.000000,325.000000,350.000000,1.000000,"discoveredWest"};
+item15[] = {"discoveredEast",4,218,225.000000,-550.000000,325.000000,-500.000000,1.000000,"discoveredEast"};
+item16[] = {"captureWest",4,218,475.000000,325.000000,575.000000,375.000000,0.000000,"captureWest"};
+item17[] = {"captureHoldEast",2,250,825.000000,400.000000,925.000000,450.000000,0.000000,"captureHoldEast"};
+item18[] = {"captureLoop",8,218,925.000000,450.000000,1025.000000,500.000000,0.000000,"captureLoop"};
+item19[] = {"captureSleep_1",2,250,1025.000000,400.000000,1125.000000,450.000000,0.000000,"captureSleep"};
+item20[] = {"captureSleep",4,218,925.000000,350.000000,1025.000000,400.000000,0.000000,"captureSleep"};
+item21[] = {"discoveredEast",4,218,225.000000,-25.000000,325.000000,25.000000,1.000000,"discoveredEast"};
+item22[] = {"discoveredWest",4,218,225.000000,-225.000000,325.000000,-175.000000,1.000000,"discoveredWest"};
+item23[] = {"captureWait",4,218,575.000000,250.000000,675.000000,300.000000,1.000000,"captureWait"};
+item24[] = {"captureWait",2,250,475.000000,175.000000,575.000000,225.000000,0.000000,"captureWait"};
+item25[] = {"captureEast",4,218,475.000000,25.000000,575.000000,75.000000,0.000000,"captureEast"};
+item26[] = {"captureWest",4,218,475.000000,-275.000000,575.000000,-225.000000,0.000000,"captureWest"};
+item27[] = {"captureHoldWest",4,218,825.000000,-50.000000,925.000000,0.000000,2.000000,"captureHoldWest"};
+item28[] = {"captureHoldEast",4,218,825.000000,-200.000000,925.000000,-150.000000,2.000000,"captureHoldEast"};
+item29[] = {"captureWait",4,218,575.000000,-500.000000,675.000000,-450.000000,1.000000,"captureWait"};
+item30[] = {"captureWait_1",2,250,475.000000,-425.000000,575.000000,-375.000000,0.000000,"captureWait"};
+item31[] = {"discoveredWest",4,218,225.000000,-750.000000,325.000000,-700.000000,2.000000,"discoveredWest"};
+item32[] = {"discoveredEast",4,218,225.000000,500.000000,325.000000,550.000000,2.000000,"discoveredEast"};
+item33[] = {"discoveredEast",4,218,325.000000,-425.000000,425.000000,-375.000000,1.000000,"discoveredEast"};
+item34[] = {"discoveredWest",4,218,325.000000,175.000000,425.000000,225.000000,1.000000,"discoveredWest"};
+item35[] = {"discoveredWest",4,218,825.000000,500.000000,925.000000,550.000000,3.000000,"discoveredWest"};
+item36[] = {"discoveredEast",4,218,825.000000,-750.000000,925.000000,-700.000000,3.000000,"discoveredEast"};
+link0[] = {0,1};
+link1[] = {0,2};
+link2[] = {0,3};
+link3[] = {1,4};
+link4[] = {2,5};
+link5[] = {3,6};
+link6[] = {4,7};
+link7[] = {4,15};
+link8[] = {4,31};
+link9[] = {5,21};
+link10[] = {5,22};
+link11[] = {5,25};
+link12[] = {5,26};
+link13[] = {6,14};
+link14[] = {6,16};
+link15[] = {6,32};
+link16[] = {7,8};
+link17[] = {8,9};
+link18[] = {8,11};
+link19[] = {8,28};
+link20[] = {8,29};
+link21[] = {8,36};
+link22[] = {9,4};
+link23[] = {10,6};
+link24[] = {11,12};
+link25[] = {12,13};
+link26[] = {13,8};
+link27[] = {14,6};
+link28[] = {15,4};
+link29[] = {16,17};
+link30[] = {17,10};
+link31[] = {17,18};
+link32[] = {17,23};
+link33[] = {17,27};
+link34[] = {17,35};
+link35[] = {18,19};
+link36[] = {19,20};
+link37[] = {20,17};
+link38[] = {21,5};
+link39[] = {22,5};
+link40[] = {23,24};
+link41[] = {24,16};
+link42[] = {24,25};
+link43[] = {24,34};
+link44[] = {25,17};
+link45[] = {26,8};
+link46[] = {27,5};
+link47[] = {28,5};
+link48[] = {29,30};
+link49[] = {30,7};
+link50[] = {30,26};
+link51[] = {30,33};
+link52[] = {31,4};
+link53[] = {32,6};
+link54[] = {33,30};
+link55[] = {34,24};
+link56[] = {35,17};
+link57[] = {36,8};
+globals[] = {25.000000,1,0,0,0,640,480,1,68,6316128,1,372.247131,1425.873169,-39.936447,-773.891968,1882,1311,1};
+window[] = {2,-1,-1,-1,-1,1310,250,2170,250,3,1900};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "TRN_server_towns.fsm";
+  class States
+  {
+    /*%FSM<STATE "StartFSM">*/
+    class StartFSM
+    {
+      name = "StartFSM";
+      init = /*%FSM<STATEINIT""">*/"_this call TRN_server_townInit;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "startResist">*/
+        class startResist
+        {
+          priority = 0.000000;
+          to="holdResist";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_this getVariable 'side') == resistance"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_this setVariable ['value', 0, true];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "startEast">*/
+        class startEast
+        {
+          priority = 0.000000;
+          to="holdEast";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_this getVariable 'side') == east"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_this setVariable ['value', -1000, true];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "startWest">*/
+        class startWest
+        {
+          priority = 0.000000;
+          to="holdWest";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_this getVariable 'side') == west"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_this setVariable ['value', 1000, true];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "holdWest">*/
+    class holdWest
+    {
+      name = "holdWest";
+      init = /*%FSM<STATEINIT""">*/"[_this, west] call TRN_server_setTownSide; " \n
+       "_this setFlagTexture '\A3\data_f\flags\flag_nato_co.paa';"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "discoveredWest">*/
+        class discoveredWest
+        {
+          priority = 2.000000;
+          to="holdWest";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(_this getVariable ""discoveredWest"")"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_this setVariable [""discoveredWest"", true, true];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "discoveredEast">*/
+        class discoveredEast
+        {
+          priority = 1.000000;
+          to="holdWest";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!(_this getVariable ""discoveredEast"")) && " \n
+           "triggeractivated (_this getVariable 'trigger_discovered_east')"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_this setVariable [""discoveredEast"", true, true];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "captureEast">*/
+        class captureEast
+        {
+          priority = 0.000000;
+          to="captureHoldWest";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(triggeractivated (_this getVariable 'trigger_east')) && " \n
+           "((count list (_this getVariable 'trigger_west') - count list (_this getVariable 'trigger_east') + count list (_this getVariable 'trigger_resist')) < 0)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "holdResist">*/
+    class holdResist
+    {
+      name = "holdResist";
+      init = /*%FSM<STATEINIT""">*/"[_this, resistance] call TRN_server_setTownSide; " \n
+       "_this setFlagTexture '\A3\data_f\flags\flag_aaf_co.paa';"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "discoveredWest">*/
+        class discoveredWest
+        {
+          priority = 1.000000;
+          to="holdResist";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!(_this getVariable ""discoveredWest"")) && " \n
+           "(triggeractivated (_this getVariable 'trigger_discovered_west'))"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_this setVariable [""discoveredWest"", true, true];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "discoveredEast">*/
+        class discoveredEast
+        {
+          priority = 1.000000;
+          to="holdResist";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!(_this getVariable ""discoveredEast"")) && " \n
+           "triggeractivated (_this getVariable 'trigger_discovered_east')"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_this setVariable [""discoveredEast"", true, true];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "captureWest">*/
+        class captureWest
+        {
+          priority = 0.000000;
+          to="captureHoldWest";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(triggeractivated (_this getVariable 'trigger_west')) && " \n
+           "((count list (_this getVariable 'trigger_west') - count list (_this getVariable 'trigger_east') - count list (_this getVariable 'trigger_resist')) > 0)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "captureEast">*/
+        class captureEast
+        {
+          priority = 0.000000;
+          to="captureHoldEast";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(triggeractivated (_this getVariable 'trigger_east')) && " \n
+           "((count list (_this getVariable 'trigger_west') - count list (_this getVariable 'trigger_east') + count list (_this getVariable 'trigger_resist')) < 0)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "holdEast">*/
+    class holdEast
+    {
+      name = "holdEast";
+      init = /*%FSM<STATEINIT""">*/"[_this, east] call TRN_server_setTownSide; " \n
+       "_this setFlagTexture '\A3\data_f\flags\flag_csat_co.paa';"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "discoveredEast">*/
+        class discoveredEast
+        {
+          priority = 2.000000;
+          to="holdEast";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(_this getVariable ""discoveredEast"")"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_this setVariable [""discoveredEast"", true, true];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "discoveredWest">*/
+        class discoveredWest
+        {
+          priority = 1.000000;
+          to="holdEast";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!(_this getVariable ""discoveredWest"")) && " \n
+           "(triggeractivated (_this getVariable 'trigger_discovered_west'))"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_this setVariable [""discoveredWest"", true, true];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "captureWest">*/
+        class captureWest
+        {
+          priority = 0.000000;
+          to="captureHoldEast";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(triggeractivated (_this getVariable 'trigger_west')) && " \n
+           "((count list (_this getVariable 'trigger_west') - count list (_this getVariable 'trigger_east') - count list (_this getVariable 'trigger_resist')) > 0)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "captureHoldWest">*/
+    class captureHoldWest
+    {
+      name = "captureHoldWest";
+      init = /*%FSM<STATEINIT""">*/"[_this, true] call TRN_server_townValue;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "discoveredEast">*/
+        class discoveredEast
+        {
+          priority = 3.000000;
+          to="captureHoldWest";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!(_this getVariable ""discoveredEast"")) && " \n
+           "triggeractivated (_this getVariable 'trigger_discovered_east')"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_this setVariable [""discoveredEast"", true, true];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "captureHoldEast">*/
+        class captureHoldEast
+        {
+          priority = 2.000000;
+          to="holdResist";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_this getVariable 'value') <= 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "capturedWest">*/
+        class capturedWest
+        {
+          priority = 2.000000;
+          to="holdWest";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_this getVariable 'value') >= 1000"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "captureWait">*/
+        class captureWait
+        {
+          priority = 1.000000;
+          to="captureWait_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((count list (_this getVariable 'trigger_west') - count list (_this getVariable 'trigger_east')) == 0) || " \n
+           "((count list (_this getVariable 'trigger_west') - count list (_this getVariable 'trigger_east') - count list (_this getVariable 'trigger_resist')) == 0) || " \n
+           "((count list (_this getVariable 'trigger_west') - count list (_this getVariable 'trigger_east') + count list (_this getVariable 'trigger_resist')) == 0)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "captureLoop">*/
+        class captureLoop
+        {
+          priority = 0.000000;
+          to="captureSleep";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "captureSleep">*/
+    class captureSleep
+    {
+      name = "captureSleep";
+      init = /*%FSM<STATEINIT""">*/"_fsmWait = time + TR_CaptureSpeed;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "captureSleep">*/
+        class captureSleep
+        {
+          priority = 0.000000;
+          to="captureHoldWest";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time >= _fsmWait"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "captureHoldEast">*/
+    class captureHoldEast
+    {
+      name = "captureHoldEast";
+      init = /*%FSM<STATEINIT""">*/"[_this, false] call TRN_server_townValue;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "discoveredWest">*/
+        class discoveredWest
+        {
+          priority = 3.000000;
+          to="captureHoldEast";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!(_this getVariable ""discoveredWest"")) && " \n
+           "(triggeractivated (_this getVariable 'trigger_discovered_west'))"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_this setVariable [""discoveredWest"", true, true];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "captureHoldWest">*/
+        class captureHoldWest
+        {
+          priority = 2.000000;
+          to="holdResist";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_this getVariable 'value') >= 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "capturedEast">*/
+        class capturedEast
+        {
+          priority = 2.000000;
+          to="holdEast";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_this getVariable 'value') <= -1000"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "captureWait">*/
+        class captureWait
+        {
+          priority = 1.000000;
+          to="captureWait";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((count list (_this getVariable 'trigger_west') - count list (_this getVariable 'trigger_east')) == 0) || " \n
+           "((count list (_this getVariable 'trigger_west') - count list (_this getVariable 'trigger_east') - count list (_this getVariable 'trigger_resist')) == 0) || " \n
+           "((count list (_this getVariable 'trigger_west') - count list (_this getVariable 'trigger_east') + count list (_this getVariable 'trigger_resist')) == 0)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "captureLoop">*/
+        class captureLoop
+        {
+          priority = 0.000000;
+          to="captureSleep_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "captureSleep_1">*/
+    class captureSleep_1
+    {
+      name = "captureSleep_1";
+      init = /*%FSM<STATEINIT""">*/"_fsmWait = time + TR_CaptureSpeed;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "captureSleep">*/
+        class captureSleep
+        {
+          priority = 0.000000;
+          to="captureHoldEast";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time >= _fsmWait"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "captureWait">*/
+    class captureWait
+    {
+      name = "captureWait";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "discoveredWest">*/
+        class discoveredWest
+        {
+          priority = 1.000000;
+          to="captureWait";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!(_this getVariable ""discoveredWest"")) && " \n
+           "(triggeractivated (_this getVariable 'trigger_discovered_west'))"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_this setVariable [""discoveredWest"", true, true];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "captureEast">*/
+        class captureEast
+        {
+          priority = 0.000000;
+          to="captureHoldEast";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(triggeractivated (_this getVariable 'trigger_east')) && " \n
+           "((count list (_this getVariable 'trigger_west') - count list (_this getVariable 'trigger_east') + count list (_this getVariable 'trigger_resist')) < 0)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "captureWest">*/
+        class captureWest
+        {
+          priority = 0.000000;
+          to="captureHoldEast";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(triggeractivated (_this getVariable 'trigger_west')) && " \n
+           "((count list (_this getVariable 'trigger_west') - count list (_this getVariable 'trigger_east') - count list (_this getVariable 'trigger_resist')) > 0)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "captureWait_1">*/
+    class captureWait_1
+    {
+      name = "captureWait_1";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "discoveredEast">*/
+        class discoveredEast
+        {
+          priority = 1.000000;
+          to="captureWait_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!(_this getVariable ""discoveredEast"")) && " \n
+           "triggeractivated (_this getVariable 'trigger_discovered_east')"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_this setVariable [""discoveredEast"", true, true];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "captureWest">*/
+        class captureWest
+        {
+          priority = 0.000000;
+          to="captureHoldWest";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(triggeractivated (_this getVariable 'trigger_west')) && " \n
+           "((count list (_this getVariable 'trigger_west') - count list (_this getVariable 'trigger_east') - count list (_this getVariable 'trigger_resist')) > 0)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "captureEast">*/
+        class captureEast
+        {
+          priority = 0.000000;
+          to="captureHoldWest";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(triggeractivated (_this getVariable 'trigger_east')) && " \n
+           "((count list (_this getVariable 'trigger_west') - count list (_this getVariable 'trigger_east') + count list (_this getVariable 'trigger_resist')) < 0)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="StartFSM";
+  finalStates[] =
+  {
+  };
+};
+/*%FSM</COMPILE>*/

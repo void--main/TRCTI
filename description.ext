@@ -1,0 +1,27 @@
+//Description File
+//created by -[EUTW]- trnapster
+
+author		= "-[EUTW]- trnapster";
+OnLoadName 	= "TRCTI v0.2";
+OnLoadMission 	= " Welcome | www.eutw.net | TS3: 144.76.73.69";
+loadScreen 	= "";
+
+respawn=3;
+respawndelay=0;
+disabledAI=true;
+respawnDialog = 0;
+onLoadMissionTime = false;
+joinUnassigned  = false;
+
+#include "rsc\resources.hpp"
+#include "rsc\dialogs.hpp"
+#include "rsc\titles.hpp"
+#include "rsc\notifications.hpp"
+#include "rsc\gearshop.hpp"
+
+class Header
+{
+	gameType=CTI;
+	minPlayers=1;
+	maxPlayers=64;
+};
